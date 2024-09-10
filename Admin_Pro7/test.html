@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header-search-nav">
+        <form class="header-item-search">
+          <div class="input-group search-input">
+            <!-- Container for dynamically created select dropdown -->
+            <div class="default-select" id="Category">
+              <!-- The select element will be inserted here dynamically by JavaScript -->
+            </div>
+      
+            <!-- Search input with an oninput event for live search -->
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Text input with dropdown button"
+              placeholder="Search Books Here"
+              id="bookSearch"
+              oninput="searchBook()"
+            />
+      
+            <!-- Search button with icon -->
+            <button class="btn" type="button" id="searchButton">
+              <i class="flaticon-loupe"></i>
+            </button>
+          </div>
+      
+          <!-- Dropdown menu for search results -->
+          <ul id="results" class="dropdown-menu"></ul>
+        </form>
+      </div>
+      
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <head>
+        <!-- Include Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Include jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <!-- Include Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    
+    <style>
+        /* Style for chat messages inside the modal */
+.modal-body .chat-messages {
+    max-height: 300px; /* Adjust height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
+}
+
+/* Admin messages in the modal */
+.modal-body .message-admin {
+    background-color: #007bff; /* Dark blue background */
+    color: #ffffff; /* White text */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+/* User messages in the modal */
+.modal-body .message-user {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333333; /* Dark text for readability */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+/* Style for the modal input group */
+.modal-footer .input-group {
+    margin-top: 10px;
+}
+
+/* Make sure the modal closes properly */
+.modal .close {
+    color: #000; /* Adjust close button color if needed */
+}
+
+    </style>
+</head>
+<body>
+    <h1>chat</h1>
+    <!-- Trigger Button for Chat Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chatModal">
+    Open Chat
+</button>
+
+<!-- Chat Modal Structure -->
+<div class="modal fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="chatModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="chatModalLabel">Chat with Admin</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="chat-messages" id="message-container">
+                    <!-- Messages will be loaded here -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="input-group">
+                    <input type="text" id="message-input" class="form-control" placeholder="Type your message here">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var userId = localStorage.getItem('userId');
+
+    async function GetAllMessage() {
+        if (!userId) {
+            console.error('User ID is not found in localStorage.');
+            return;
+        }
+
+        const API = `https://localhost:44309/api/Chat/showMessage/${userId}`;
+
+        try {
+            const response = await fetch(API);
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            const data = await response.json();
+            const messageContainer = document.getElementById("message-container");
+            messageContainer.innerHTML = '';
+
+            data.forEach(message => {
+                const messageClass = message.flag === 1 ? 'message-admin' : 'message-user';
+                messageContainer.innerHTML += `
+                    <div class="${messageClass}">
+                        <strong>${message.flag === 1 ? 'Admin' : 'User'}:</strong>
+                        <p>${message.cmessages || 'No message content'}</p>
+                    </div>
+                `;
+            });
+        } catch (error) {
+            console.error('Error fetching messages:', error);
+        }
+    }
+
+    // Call the function to load messages when the modal is shown
+    $('#chatModal').on('shown.bs.modal', GetAllMessage);
+
+    async function sendMessage() {
+        const messageInput = document.getElementById('message-input').value.trim();
+        if (!messageInput) {
+            alert("Please enter a message before sending.");
+            return;
+        }
+
+        const API = `https://localhost:44309/api/Chat/replayMessage/${userId}`;
+        
+        const formData = new FormData();
+        formData.append('cmessages', messageInput);
+        formData.append('flag', 0); // Indicates this message is from the user
+
+        try {
+            const response = await fetch(API, {
+                method: 'POST',
+                body: formData
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            document.getElementById('message-input').value = '';
+            GetAllMessage(); // Refresh messages
+        } catch (error) {
+            console.error('Error sending message:', error);
+        }
+    }
+
+    // Attach sendMessage function to the button click event
+    document.querySelector('.modal-footer .btn-primary').addEventListener('click', sendMessage);
+});
+
+</script>
+</body>
+</html>
