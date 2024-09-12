@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8A9A33F-2D4D-40A0-BE1B-BE30F0903763}|Project-7\\Project-7.csproj|c:\\users\\orange\\desktop\\sarah_admin_project7\\admin_dashboard\\project-7\\project-7\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8A9A33F-2D4D-40A0-BE1B-BE30F0903763}|Project-7\\Project-7.csproj|solutionrelative:project-7\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8A9A33F-2D4D-40A0-BE1B-BE30F0903763}|Project-7\\Project-7.csproj|c:\\users\\orange\\desktop\\sarah_admin_project7\\admin_dashboard\\project-7\\project-7\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8A9A33F-2D4D-40A0-BE1B-BE30F0903763}|Project-7\\Project-7.csproj|solutionrelative:project-7\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8A9A33F-2D4D-40A0-BE1B-BE30F0903763}|Project-7\\Project-7.csproj|c:\\users\\orange\\desktop\\sarah_admin_project7\\admin_dashboard\\project-7\\project-7\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8A9A33F-2D4D-40A0-BE1B-BE30F0903763}|Project-7\\Project-7.csproj|solutionrelative:project-7\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8A9A33F-2D4D-40A0-BE1B-BE30F0903763}|Project-7\\Project-7.csproj|c:\\users\\orange\\desktop\\sarah_admin_project7\\admin_dashboard\\project-7\\project-7\\controllers\\newslettercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8A9A33F-2D4D-40A0-BE1B-BE30F0903763}|Project-7\\Project-7.csproj|solutionrelative:project-7\\controllers\\newslettercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8A9A33F-2D4D-40A0-BE1B-BE30F0903763}|Project-7\\Project-7.csproj|c:\\users\\orange\\desktop\\sarah_admin_project7\\admin_dashboard\\project-7\\project-7\\controllers\\contactuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8A9A33F-2D4D-40A0-BE1B-BE30F0903763}|Project-7\\Project-7.csproj|solutionrelative:project-7\\controllers\\contactuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8A9A33F-2D4D-40A0-BE1B-BE30F0903763}|Project-7\\Project-7.csproj|c:\\users\\orange\\desktop\\sarah_admin_project7\\admin_dashboard\\project-7\\project-7\\dto\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8A9A33F-2D4D-40A0-BE1B-BE30F0903763}|Project-7\\Project-7.csproj|solutionrelative:project-7\\dto\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8A9A33F-2D4D-40A0-BE1B-BE30F0903763}|Project-7\\Project-7.csproj|c:\\users\\orange\\desktop\\sarah_admin_project7\\admin_dashboard\\project-7\\project-7\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E8A9A33F-2D4D-40A0-BE1B-BE30F0903763}|Project-7\\Project-7.csproj|solutionrelative:project-7\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\Project-7\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Project-7\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\Project-7\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Project-7\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T15:05:24.511Z",
-              "IsPinned": true
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -48,39 +31,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\Project-7\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Project-7\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\Project-7\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Project-7\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABoAAAArAAAA",
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\Project-7\\Controllers\\ChatController.cs",
+              "RelativeDocumentMoniker": "Project-7\\Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\Project-7\\Controllers\\ChatController.cs",
+              "RelativeToolTip": "Project-7\\Controllers\\ChatController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T15:52:57.16Z",
+              "WhenOpened": "2024-09-12T12:43:54.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IEmailService.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\Project-7\\DTO\\IEmailService.cs",
-              "RelativeDocumentMoniker": "Project-7\\DTO\\IEmailService.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\Project-7\\DTO\\IEmailService.cs",
-              "RelativeToolTip": "Project-7\\DTO\\IEmailService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T15:04:54.667Z"
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\Project-7\\appsettings.json",
+              "RelativeDocumentMoniker": "Project-7\\appsettings.json",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\Project-7\\appsettings.json",
+              "RelativeToolTip": "Project-7\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-12T09:14:15.901Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ContactUsController.cs",
-              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\Project-7\\Controllers\\ContactUsController.cs",
-              "RelativeDocumentMoniker": "Project-7\\Controllers\\ContactUsController.cs",
-              "ToolTip": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\Project-7\\Controllers\\ContactUsController.cs",
-              "RelativeToolTip": "Project-7\\Controllers\\ContactUsController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAADwvyQAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "NewsLetterController.cs",
+              "DocumentMoniker": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\Project-7\\Controllers\\NewsLetterController.cs",
+              "RelativeDocumentMoniker": "Project-7\\Controllers\\NewsLetterController.cs",
+              "ToolTip": "C:\\Users\\Orange\\Desktop\\Sarah_Admin_Project7\\Admin_Dashboard\\Project-7\\Project-7\\Controllers\\NewsLetterController.cs",
+              "RelativeToolTip": "Project-7\\Controllers\\NewsLetterController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAwEkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T14:35:37.054Z"
+              "WhenOpened": "2024-09-12T08:58:42.868Z"
             }
           ]
         }

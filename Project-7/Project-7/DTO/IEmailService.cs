@@ -27,16 +27,16 @@ namespace Project_7.DTO
 
         public async Task SendEmailAsync(string to, string subject, string body)
         {
-            var smtpClient = new SmtpClient(_smtpServer)
+            var smtpClient = new SmtpClient("smtp.gmail.com")
             {
-                Port = _smtpPort,
-                Credentials = new NetworkCredential(_smtpUser, _smtpPass),
+                Port = 587,
+                Credentials = new NetworkCredential("batoulkhazali96@gmail.com", "fyqh zvgz bgyv gail"),
                 EnableSsl = true, // Ensure SSL/TLS is enabled
             };
 
             var mailMessage = new MailMessage
             {
-                From = new MailAddress(_smtpUser),
+                From = new MailAddress("batoulkhazali96@gmail.com"),
                 Subject = subject,
                 Body = body,
                 IsBodyHtml = true,
@@ -58,6 +58,4 @@ namespace Project_7.DTO
             }
         }
     }
-
-
 }
