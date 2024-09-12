@@ -8,7 +8,7 @@
     <meta name="description" content="CoreUI - Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,SCSS,HTML,RWD,Dashboard">
-    <title>Admin - Edit Points Redeem</title>
+    <title>Admin - Subscription</title>
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
@@ -46,159 +46,96 @@
   <body>
     <div class="sidebar sidebar-fixed sidebar-light" id="sidebar">
       <ul class="sidebar-nav border-end" data-coreui="navigation" data-simplebar="">
-        <li class="nav-item">
-          <a class="nav-link" href="/index.html">
+        <li class="nav-item"><a class="nav-link" href="/index.html">
             <svg class="nav-icon">
               <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
             </svg><span data-coreui-i18n="dashboard">Dashboard</span></a>
         </li>
-    
+
         <li class="nav-title" data-coreui-i18n="Components">Components</li>
-    
-        <li class="nav-group">
-          <a class="nav-link nav-group-toggle" href="#">
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
               <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-            </svg>
-            <span>Categories</span>
-          </a>
+            </svg><span>Categories</span></a>
           <ul class="nav-group-items compact">
-            <li class="nav-item">
-              <a class="nav-link" href="/Category/Categories.html">
-                <span class="nav-icon"><span class="nav-icon-bullet"></span></span><span>Show Categories</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Category/addcategory.html">
-                <span class="nav-icon"><span class="nav-icon-bullet"></span></span> Add Categories
-              </a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="/Category/Categories.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span><span>Show Categories</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="/Category/addcategory.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Add Categories</a></li>
           </ul>
         </li>
-    
+
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
-          <svg class="nav-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 8h-4V5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v3H5a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1zm-6-2h2v2h-2V6zm6 16H5V10h14v12zM5 8h4V6h2v2h4V8h4v2H5V8z"></path>
-          </svg><span>Products</span></a>
-        <ul class="nav-group-items compact">
-          <li class="nav-item"><a class="nav-link" href="/Product/Product.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Show Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="/Product/addproduct.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Add Products</a></li>
-        </ul>
-      </li>
-    
-        <li class="nav-group">
-          <a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
-              <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-            </svg><span>Admins</span>
-          </a>
+              <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+            </svg><span>Products</span></a>
           <ul class="nav-group-items compact">
-            <li class="nav-item">
-              <a class="nav-link" href="/Users/users.html">
-                <span class="nav-icon"><span class="nav-icon-bullet"></span></span> Show Admins
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Users/adduser.html">
-                <span class="nav-icon"><span class="nav-icon-bullet"></span></span> Add Admins
-              </a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="/Product/Product.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Show Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="/Product/addproduct.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Add Products</a></li>
           </ul>
         </li>
-    
-        <li class="nav-group">
-          <a class="nav-link nav-group-toggle" href="#">
-            <svg class="nav-icon">
-              <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-tag"></use>
-            </svg><span>Coupons</span>
-          </a>
+
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <svg class="nav-icon">
+            <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+          </svg><span>Admins</span></a>
           <ul class="nav-group-items compact">
-            <li class="nav-item">
-              <a class="nav-link" href="/Cupons/Cupons.html">
-                <span class="nav-icon"><span class="nav-icon-bullet"></span></span> Show Coupons
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/Cupons/addCupons.html">
-                <span class="nav-icon"><span class="nav-icon-bullet"></span></span> Add Coupons
-              </a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="/Users/users.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Show Admins</a></li>
+            <li class="nav-item"><a class="nav-link" href="/Users/adduser.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Add Admins</a></li>
           </ul>
         </li>
-    
-        <li class="nav-group">
-          <a class="nav-link nav-group-toggle" href="#">
-            <svg class="nav-icon">
-              <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-credit-card"></use>
-            </svg><span>Earning Points</span>
-          </a>
+
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <svg class="nav-icon">
+            <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+          </svg><span>Cuopons</span></a>
           <ul class="nav-group-items compact">
-            <li class="nav-item">
-              <a class="nav-link" href="/EarningPoints/EarningPoints.html">
-                <span class="nav-icon"><span class="nav-icon-bullet"></span></span> Earning Points
-              </a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="/Cupons/Cupons.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Show Cuopons</a></li>
+            <li class="nav-item"><a class="nav-link" href="/Cupons/addCupons.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Add Coupons</a></li>
           </ul>
         </li>
-    
-        <li class="nav-group">
-          <a class="nav-link nav-group-toggle" href="#">
-            <svg class="nav-icon">
-              <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-credit-card"></use>
-            </svg><span>Redeem Points</span>
-          </a>
+
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <svg class="nav-icon">
+            <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+          </svg><span>Earning Points</span></a>
           <ul class="nav-group-items compact">
-            <li class="nav-item">
-              <a class="nav-link" href="/PointsRedeem/PointsRedeem.html">
-                <span class="nav-icon"><span class="nav-icon-bullet"></span></span> Show Redeem Points
-              </a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="/EarningPoints/EarningPoints.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Earning Points</a></li>
           </ul>
         </li>
-    
-        <li class="nav-group">
-          <a class="nav-link nav-group-toggle" href="#">
-            <svg class="nav-icon">
-              <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-chat-bubble"></use>
-            </svg><span>Chats</span>
-          </a>
+
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <svg class="nav-icon">
+            <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+          </svg><span>Redeem Points</span></a>
           <ul class="nav-group-items compact">
-            <li class="nav-item">
-              <a class="nav-link" href="/Chat/userChat.html">
-                <span class="nav-icon"><span class="nav-icon-bullet"></span></span> Users Chats
-              </a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="/PointsRedeem/PointsRedeem.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Show Redeem Points</a></li>
           </ul>
         </li>
-    
-        <li class="nav-group">
-          <a class="nav-link nav-group-toggle" href="#">
-            <svg class="nav-icon">
-              <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-newspaper"></use>
-            </svg><span>Latest News</span>
-          </a>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <svg class="nav-icon">
+            <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+          </svg><span>Chats</span></a>
           <ul class="nav-group-items compact">
-            <li class="nav-item">
-              <a class="nav-link" href="/LatestNews/LatestNews.html">
-                <span class="nav-icon"><span class="nav-icon-bullet"></span></span> Show News
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/LatestNews/AddNews.html">
-                <span class="nav-icon"><span class="nav-icon-bullet"></span></span> Add News
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/LatestNews/NewsLetter.html">
-                <span class="nav-icon"><span class="nav-icon-bullet"></span></span> Subscribers
-              </a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="/Chat/userChat.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Users Chats</a></li>
           </ul>
         </li>
-    
+
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <svg class="nav-icon">
+            <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+          </svg><span>Latest News</span></a>
+          <ul class="nav-group-items compact">
+            <li class="nav-item"><a class="nav-link" href="/LatestNews/LatestNews.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Show News</a></li>
+          </ul>
+          <ul class="nav-group-items compact">
+            <li class="nav-item"><a class="nav-link" href="/LatestNews/AddNews.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Add News</a></li>
+          </ul>
+          <ul class="nav-group-items compact">
+            <li class="nav-item"><a class="nav-link" href="/LatestNews/NewsLetter.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Subscribers</a></li>
+          </ul>
+        </li>
+
       </ul>
     </div>
-
     <div class="wrapper d-flex flex-column min-vh-100">
       <header class="header header-light bg-primary header-sticky p-0 mb-4">
         <div class="container-fluid px-4">
@@ -290,37 +227,33 @@
 
 
       <div class="content">
-        <!-- Container to center content properly -->
         <div class="container">
-            <h2 class="mb-4">Edit Points Redeem</h2>
-    
-            <!-- Card Component for Form -->
+            <!-- Card Component -->
             <div class="card">
-                <!-- Card Body -->
+                <!-- Card Header -->
+                <div class="card-header">
+                    <h4>Subscribers</h4>
+                </div>
+    
+                <!-- Card Body with Table -->
                 <div class="card-body">
-                    <form id="form">
-                        <div class="mb-3">
-                            <label for="pointamount" class="form-label">Social Media Share</label>
-                            <input type="text" class="form-control" id="pointamount" name="pointsAmount" placeholder="Enter points amount" required />
-                        </div>
-    
-                        <div class="mb-3">
-                            <label for="discount" class="form-label">Book Purchase</label>
-                            <input type="text" class="form-control" id="discount" name="discountPercentage" placeholder="Enter discount percentage" required />
-                        </div>
-    
-                        <div class="mb-3">
-                            <label for="spinnigwheel" class="form-label">Invite Friend</label>
-                            <input type="text" class="form-control" id="spinnigwheel" name="spinningWheel" placeholder="Enter spinnig wheel number" required />
-                        </div>
-    
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn btn-primary w-100">Update Points</button>
-                    </form>
+                    <table class="table table-striped table-hover table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody id="container">
+                            <!-- Dynamic content goes here -->
+                        </tbody>
+                    </table>
+                    <!-- Send All Button -->
+                    <button id="sendAllButton" class="btn btn-primary">Send All News</button>
                 </div>
             </div>
         </div>
     </div>
+    
     
     </div>
 
@@ -355,7 +288,7 @@
     <script src="/vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
     <script src="/vendors/@coreui/utils/js/index.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/PointsRedeem/EditPointsRedeem.js"></script>
+    <script src="/LatestNews/NewsLetter.js"></script>
     <script src="/notification.js"></script>
 
 
