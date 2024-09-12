@@ -8,7 +8,7 @@
     <meta name="description" content="CoreUI - Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,SCSS,HTML,RWD,Dashboard">
-    <title>Admin - Add Product</title>
+    <title>Admin - Add News</title>
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
@@ -236,78 +236,29 @@
 
 
       <div class="content">
-        <!-- Container to center content properly -->
         <div class="container">
-            <h2 class="mb-4">Add New Product</h2>
+            <h2 class="mb-4">Add New News</h2>
     
-            <!-- Card Component for Form -->
             <div class="card">
-                <!-- Card Body -->
                 <div class="card-body">
                     <form id="form">
-                        <!-- Book Title -->
                         <div class="mb-3">
-                            <label for="Booktitle" class="form-label">Book Title</label>
-                            <input type="text" class="form-control" id="Booktitle" name="title" placeholder="Enter book title" required />
+                            <label for="imageURL" class="form-label">Image URL</label>
+                            <input type="text" class="form-control" id="imageURL" name="imageUrl" placeholder="Enter book title" required />
                         </div>
     
-                        <!-- Book's Author -->
                         <div class="mb-3">
-                            <label for="Bookauthor" class="form-label">Book's Author</label>
-                            <input type="text" class="form-control" id="Bookauthor" name="author" placeholder="Enter book's author" required />
+                            <label for="newsType" class="form-label">News Type</label>
+                            <input type="text" class="form-control" id="newsType" name="newsType" placeholder="Enter book's author" required />
                         </div>
         
-                        <!-- Book's Publisher -->
                         <div class="mb-3">
-                            <label for="publisher" class="form-label">Book's Publisher</label>
-                            <input type="text" class="form-control" id="publisher" name="publisher" placeholder="Enter Book's publisher" required />
-                        </div>
-    
-                        <!-- Year Published -->
-                        <div class="mb-3">
-                            <label for="yearpublished" class="form-label">Book's Year Published</label>
-                            <input type="text" class="form-control" id="yearpublished" name="yearPublished" placeholder="Enter book's year" required />
-                        </div>
-    
-                        <!-- Book Description -->
-                        <div class="mb-3">
-                            <label for="description" class="form-label">Book Description</label>
-                            <textarea class="form-control" id="description" name="description" rows="3" placeholder="Enter book description" required></textarea>
-                        </div>
-    
-                        <!-- Book Price -->
-                        <div class="mb-3">
-                            <label for="Bookprice" class="form-label">Book Price</label>
-                            <input type="text" class="form-control" id="Bookprice" name="price" placeholder="Enter book's price" required />
-                        </div>
-    
-                        <!-- Book Discount -->
-                        <div class="mb-3">
-                            <label for="Bookdiscount" class="form-label">Book Discount</label>
-                            <input type="text" class="form-control" id="Bookdiscount" name="discountPercentage" placeholder="Enter book's discount" required />
-                        </div>
-    
-                        <!-- Book Image URL -->
-                        <div class="mb-3">
-                          <label for="image" class="form-label">Book Image URL</label>
-                          <input type="text" class="form-control" id="imageUrlInput" name="imageUrl" placeholder="Enter Image URL" required />
-                        </div>
-
-                        <div class="mb-3">
-                          <label for="imagePreview" class="form-label" style="display:none;">Image Preview</label>
-                          <img id="imagePreview" src="" alt="Image Preview" class="img-thumbnail" style="display:none; max-width: 200px; max-height: 200px;" />
-                      </div>
-    
-                        <!-- Book's Category -->
-                        <div class="mb-3">
-                            <label for="selectCat" class="form-label">Book's Category</label>
-                            <select id="selectCat" name="categoryId" class="form-select" required>
-                                <option value="">Select Category</option>
-                            </select>
+                            <label for="Description" class="form-label">Description</label>
+                            <input type="text" class="form-control" id="Description" name="description" placeholder="Enter Book's publisher" required />
                         </div>
     
                         <!-- Submit Button -->
-                        <button type="submit" class="btn btn-primary w-100">Add Product</button>
+                        <button type="submit" class="btn btn-primary w-100">Add News</button>
                     </form>
                 </div>
             </div>
@@ -364,7 +315,7 @@ logoutUser()
     <script src="/vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
     <script src="/vendors/@coreui/utils/js/index.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/Product/addproduct.html"></script>
+    <script src="/LatestNews/AddNews.js"></script>
     <script src="/notification.js"></script>
 
 

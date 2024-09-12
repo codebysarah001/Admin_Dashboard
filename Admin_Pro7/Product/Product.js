@@ -159,7 +159,6 @@ async function GetAllProducts() {
             <tr>
               <td>${book.title}</td>
               <td>${book.author}</td>
-              <td>${book.categoryid}</td>
               <td>
                 <a href="#" onclick="View(${book.id}); return false;" class="btn btn-info btn-sm">View</a>
                 <a href="/Product/editproduct.html" onclick="Edit(${book.id}); return false;" class="btn btn-primary btn-sm">Edit</a>

@@ -9,7 +9,7 @@
     <meta name="description" content="CoreUI - Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,SCSS,HTML,RWD,Dashboard">
-    <title>Admin - Edit Category</title>
+    <title>Admin - Edit News</title>
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
@@ -42,6 +42,7 @@
           window.location.href = "../login.html";
       }
   </script>
+
   </head>
 
 <body>
@@ -131,6 +132,7 @@
               <li class="nav-item"><a class="nav-link" href="/Chat/userChat.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Users Chats</a></li>
             </ul>
           </li>
+
           <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
               <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
@@ -236,36 +238,39 @@
         </header>
   
   
-        <!-- Main Content -->
         <div class="content">
-            <div class="container">
-                <h2 class="mb-4">Update Category</h2>
-
-                <!-- Card for form -->
-                <div class="card">
-                    <div class="card-body">
-                        <form id="form">
-                            <div class="mb-3">
-                                <label for="CategoryName" class="form-label">Category Name</label>
-                                <input type="text" class="form-control" id="CategoryName" name="name" placeholder="Enter category name" required />
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="Categorydescription" class="form-label">Category Description</label>
-                                <input type="text" class="form-control" id="Categorydescription" name="description" placeholder="Enter category description" required />
-                            </div>
-
-                            <button type="submit" class="btn btn-primary w-100">Update Category</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+          <div class="container">
+              <h2 class="mb-4">Edit News</h2>
+      
+              <div class="card">
+                  <div class="card-body">
+                      <form id="form">
+                        <div class="mb-3">
+                          <label for="imageURL" class="form-label">Image URL</label>
+                          <input type="text" class="form-control" id="imageURL" name="imageUrl" placeholder="Enter image URL" required />
+                        </div>
+                      
+                      <div class="mb-3">
+                          <label for="newsType" class="form-label">News Type</label>
+                          <input type="text" class="form-control" id="newsType" name="newsType" placeholder="Enter news type" required />
+                        </div>
+                      
+                      <div class="mb-3">
+                          <label for="Description" class="form-label">Description</label>
+                          <input type="text" class="form-control" id="Description" name="description" placeholder="Enter description" required />
+                      </div>
+                          <button type="submit" class="btn btn-primary w-100">Update News</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
       </div>
     
 
     <!-- Scripts -->
-    <script src="/Category/editcategory.js"></script>
+    <script src="/LatestNews/editNews.js"></script>
     <!-- CoreUI and necessary plugins-->
     <script src="/vendors/@coreui/coreui-pro/js/coreui.bundle.min.js"></script>
     <script src="/vendors/simplebar/js/simplebar.min.js"></script>

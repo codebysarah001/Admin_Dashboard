@@ -8,7 +8,7 @@
     <meta name="description" content="CoreUI - Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,SCSS,HTML,RWD,Dashboard">
-    <title>Admin - Add Product</title>
+    <title>Admin</title>
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
@@ -129,7 +129,6 @@
             <li class="nav-item"><a class="nav-link" href="/Chat/userChat.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Users Chats</a></li>
           </ul>
         </li>
-
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
           <svg class="nav-icon">
             <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
@@ -144,7 +143,6 @@
 
       </ul>
     </div>
-
     <div class="wrapper d-flex flex-column min-vh-100">
       <header class="header header-light bg-primary header-sticky p-0 mb-4">
         <div class="container-fluid px-4">
@@ -234,90 +232,12 @@
         </div>
       </header>
 
-
-      <div class="content">
-        <!-- Container to center content properly -->
-        <div class="container">
-            <h2 class="mb-4">Add New Product</h2>
-    
-            <!-- Card Component for Form -->
-            <div class="card">
-                <!-- Card Body -->
-                <div class="card-body">
-                    <form id="form">
-                        <!-- Book Title -->
-                        <div class="mb-3">
-                            <label for="Booktitle" class="form-label">Book Title</label>
-                            <input type="text" class="form-control" id="Booktitle" name="title" placeholder="Enter book title" required />
-                        </div>
-    
-                        <!-- Book's Author -->
-                        <div class="mb-3">
-                            <label for="Bookauthor" class="form-label">Book's Author</label>
-                            <input type="text" class="form-control" id="Bookauthor" name="author" placeholder="Enter book's author" required />
-                        </div>
-        
-                        <!-- Book's Publisher -->
-                        <div class="mb-3">
-                            <label for="publisher" class="form-label">Book's Publisher</label>
-                            <input type="text" class="form-control" id="publisher" name="publisher" placeholder="Enter Book's publisher" required />
-                        </div>
-    
-                        <!-- Year Published -->
-                        <div class="mb-3">
-                            <label for="yearpublished" class="form-label">Book's Year Published</label>
-                            <input type="text" class="form-control" id="yearpublished" name="yearPublished" placeholder="Enter book's year" required />
-                        </div>
-    
-                        <!-- Book Description -->
-                        <div class="mb-3">
-                            <label for="description" class="form-label">Book Description</label>
-                            <textarea class="form-control" id="description" name="description" rows="3" placeholder="Enter book description" required></textarea>
-                        </div>
-    
-                        <!-- Book Price -->
-                        <div class="mb-3">
-                            <label for="Bookprice" class="form-label">Book Price</label>
-                            <input type="text" class="form-control" id="Bookprice" name="price" placeholder="Enter book's price" required />
-                        </div>
-    
-                        <!-- Book Discount -->
-                        <div class="mb-3">
-                            <label for="Bookdiscount" class="form-label">Book Discount</label>
-                            <input type="text" class="form-control" id="Bookdiscount" name="discountPercentage" placeholder="Enter book's discount" required />
-                        </div>
-    
-                        <!-- Book Image URL -->
-                        <div class="mb-3">
-                          <label for="image" class="form-label">Book Image URL</label>
-                          <input type="text" class="form-control" id="imageUrlInput" name="imageUrl" placeholder="Enter Image URL" required />
-                        </div>
-
-                        <div class="mb-3">
-                          <label for="imagePreview" class="form-label" style="display:none;">Image Preview</label>
-                          <img id="imagePreview" src="" alt="Image Preview" class="img-thumbnail" style="display:none; max-width: 200px; max-height: 200px;" />
-                      </div>
-    
-                        <!-- Book's Category -->
-                        <div class="mb-3">
-                            <label for="selectCat" class="form-label">Book's Category</label>
-                            <select id="selectCat" name="categoryId" class="form-select" required>
-                                <option value="">Select Category</option>
-                            </select>
-                        </div>
-    
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn btn-primary w-100">Add Product</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+      <h2 class="mb-4">Latest News</h2>
+      <div class="card-group" id="card-group">
+        <!-- Cards will be dynamically injected here -->
     </div>
     
-    
-    
     </div>
-
 
     <!-- CoreUI and necessary plugins-->
     <script src="/vendors/@coreui/coreui-pro/js/coreui.bundle.min.js"></script>
@@ -335,28 +255,13 @@
         }
       });
     </script>
-
-<script>
-  // Function to update the image preview
-  function updateImagePreview() {
-      const imageUrlInput = document.getElementById('imageUrlInput');
-      const imagePreview = document.getElementById('imagePreview');
+        <script>
+          function logoutUser() {
+              localStorage.clear();
       
-      const imageUrl = imageUrlInput.value;
-
-      if (imageUrl) {
-          imagePreview.src = imageUrl;
-          imagePreview.style.display = 'block'; // Show the image preview
-      } else {
-          imagePreview.style.display = 'none'; // Hide the preview if URL is empty
-      }
-  }
-
-  // Listen for changes in the image URL input field
-  document.getElementById('imageUrlInput').addEventListener('input', updateImagePreview);
-</script>
-
-logoutUser()
+              window.location.href = "../login.html"; // Replace with your actual login page URL
+          }
+       </script>
     
     <!-- Plugins and scripts required by this view-->
     <script src="/vendors/chart.js/js/chart.umd.js"></script>
@@ -364,7 +269,7 @@ logoutUser()
     <script src="/vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
     <script src="/vendors/@coreui/utils/js/index.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/Product/addproduct.html"></script>
+    <script src="/LatestNews/LatestNews.js"></script>
     <script src="/notification.js"></script>
 
 

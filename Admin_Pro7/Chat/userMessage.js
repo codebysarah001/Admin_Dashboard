@@ -31,7 +31,6 @@ async function GetAllMessage() {
     }
 }
 
-// Call the function to load messages
 GetAllMessage();
 
 async function sendMessage() {
@@ -43,24 +42,22 @@ async function sendMessage() {
 
     const API = `https://localhost:44309/api/Chat/replayMessage/${userId}`;
     
-    // Create a FormData object to hold the data
     const formData = new FormData();
     formData.append('cmessages', messageInput);
-    formData.append('flag', 1); // Indicates this message is from the admin
+    formData.append('flag', 1); 
 
     try {
         const response = await fetch(API, {
             method: 'POST',
-            body: formData // Attach the FormData object
+            body: formData
         });
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        // Clear the input field after sending the message
         document.getElementById('message-input').value = '';
-        GetAllMessage(); // Refresh messages to include the new message
+        GetAllMessage();
     } catch (error) {
         console.error('Error sending message:', error);
     }

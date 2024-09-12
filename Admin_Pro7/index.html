@@ -129,6 +129,17 @@
             <li class="nav-item"><a class="nav-link" href="/Chat/userChat.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Users Chats</a></li>
           </ul>
         </li>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+          <svg class="nav-icon">
+            <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+          </svg><span>Latest News</span></a>
+          <ul class="nav-group-items compact">
+            <li class="nav-item"><a class="nav-link" href="/LatestNews/LatestNews.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Show News</a></li>
+          </ul>
+          <ul class="nav-group-items compact">
+            <li class="nav-item"><a class="nav-link" href="/LatestNews/AddNews.html"><span class="nav-icon"><span class="nav-icon-bullet"></span></span> Add News</a></li>
+          </ul>
+        </li>
 
       </ul>
     </div>
@@ -142,7 +153,23 @@
                 </svg>
             </button>
             <ul class="header-nav d-none d-md-flex ms-auto">
-            </ul>
+              <li class="nav-item dropdown">
+                  <a class="nav-link" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                      <span class="d-inline-block my-1 mx-2 position-relative">
+                          <svg class="icon icon-lg">
+                              <use xlink:href="/vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
+                          </svg>
+                          <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger rounded-circle">
+                              <span class="visually-hidden">New alerts</span>
+                          </span>
+                      </span>
+                  </a>
+          
+                  <div id="dropdownMenu" class="dropdown-menu dropdown-menu-end dropdown-menu-lg py-0" style="min-width: 24rem; max-height: 400px; overflow-y: auto;">
+                      <!-- Content will be dynamically inserted here -->
+                  </div>
+              </li>
+          </ul>
             <ul class="header-nav ms-auto ms-md-0">
                 <li class="nav-item py-1">
                     <div class="vr h-100 mx-2 text-white text-opacity-75"></div>
@@ -182,20 +209,21 @@
                     <div class="vr h-100 mx-2 text-white text-opacity-75"></div>
                 </li>
             </ul>
+            
             <ul class="header-nav">
               <li class="nav-item dropdown">
                   <!-- Replace avatar with hamburger menu icon -->
                   <a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                       <!-- Hamburger Menu Icon -->
                       <svg class="icon icon-lg">
-                          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use> <!-- Use appropriate icon ID here -->
+                          <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
                       </svg>
                   </a>
                   <div class="dropdown-menu dropdown-menu-end pt-0">
                       <div class="dropdown-header bg-body-tertiary text-body-secondary fw-semibold my-2" data-coreui-i18n="settings">Settings</div>
-                      <a class="dropdown-item" href="#" onclick="logoutUser()"> <!-- Call logoutUser function here -->
+                      <a class="dropdown-item" href="#" onclick="logoutUser()">
                           <svg class="icon me-2">
-                              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use> <!-- Logout SVG Icon -->
+                              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use> 
                           </svg>
                           <span data-coreui-i18n="logout">Logout</span>
                       </a>
@@ -318,7 +346,39 @@
                 </div>
               </div>
             </div>
+
+            <div class="col-xl-3">
+              <div class="row">
+                <div class="col-md-4 col-xl-12">
+                  <div class="card mb-4 text-white bg-primary-gradient">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                      <!-- Existing content -->
+                      <div>
+                        <div data-coreui-i18n="users">PDF file Format</div>
+                      </div>
+
+                      <button id="downloadPdfBtn" class="btn btn-light">Download</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-xl-12">
+                  <div class="card mb-4 text-white bg-warning-gradient">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                      <!-- Existing content -->
+                      <div>
+                        <div data-coreui-i18n="users">Excel file Format</div>
+                      </div>
+                      <button id="downloadExcelBtn" class="btn btn-light">Download</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
+
+          
           
           
         </div>
@@ -330,6 +390,7 @@
     <script src="vendors/simplebar/js/simplebar.min.js"></script>
     <script src="vendors/i18next/js/i18next.min.js"></script>
     <script src="vendors/i18next-http-backend/js/i18nextHttpBackend.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="vendors/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.js"></script>
     <script src="js/i18next.js"></script>
 
@@ -348,6 +409,8 @@
     <script src="vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
     <script src="vendors/@coreui/utils/js/index.js"></script>
     <script src="js/main.js"></script>
+    <script src="notification.js"></script>
+    <script src="DownloadOrders.js"></script>
     <script>
       function logoutUser() {
           // Clear local storage
@@ -356,7 +419,7 @@
           // Redirect to login page
           window.location.href = "login.html"; // Replace with your actual login page URL
       }
-  </script>
+    </script>
 
 
 <script>
